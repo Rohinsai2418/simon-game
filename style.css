@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Score display - top right on desktop, centered on mobile */
+.score-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+  .score-container {
+    position: static;
+    margin: 8px auto;
+    right: auto;
+    top: auto;
+  }
+}
+
+h2 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  color: #34495e;
+}
+
+.game-board {
+  margin: 20px auto;
+  max-width: 320px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.btn {
+  height: 140px;
+  width: 140px;
+  border: 5px solid black;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.red    { background-color: #FF3B30; }
+.blue   { background-color: #007AFF; }
+.green  { background-color: #4CD964; }
+.purple { background-color: #FFCC00; }
+
+.flash {
+  background-color: whitesmoke !important;
+}
+
+.error {
+  background-color: #8E44AD !important;
+}
+
+.bodycolor {
+  background-color: #c7ecf2;
+}
+
+/* Reset Button */
+button {
+  padding: 16px 36px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  letter-spacing: 2.5px;
+  background-color: hsl(261deg 80% 48%);
+  color: white;
+  box-shadow: rgb(93 24 220) 0px 7px 20px 0px;
+}
+
+button:active {
+  transform: translateY(6px);
+  box-shadow: none;
+}
+
+.no-hover:hover {
+  letter-spacing: 1.5px;
+  background-color: white;
+  color: black;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+}
+
+/* Mobile Start Button */
+.start-btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: hsl(261deg 80% 48%);
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin: 15px auto;
+  display: block;
+  width: 180px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(93, 24, 220, 0.4);
+  transition: all 0.2s;
+}
+
+.start-btn:hover {
+  background-color: hsl(261deg, 85%, 52%);
+  transform: scale(1.03);
+}
+
+/* Hide start button on desktop/tablet */
+@media (min-width: 601px) {
+  .start-btn {
+    display: none !important;
+  }
+}
+
+/* Better mobile button sizing */
+@media (max-width: 600px) {
+  .btn {
+    height: 110px;
+    width: 110px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    padding: 0 10px;
+  }
+}
